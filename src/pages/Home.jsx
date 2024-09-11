@@ -23,8 +23,8 @@ function Home() {
 
   const { mutate: updateUser } = useMutation({
     mutationFn: (data) =>
-      axios(`http://localhost:3000/users/${data.id}`, {
-        name: data.newValue,
+      axios.patch(`http://localhost:3000/users/${data.id}`, {
+        name: data.newValue
       }),
     onSuccess: () => refetch(),
   });
