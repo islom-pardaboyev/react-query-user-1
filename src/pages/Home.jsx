@@ -31,15 +31,15 @@ function Home() {
   function handleSubmit(e) {
     e.preventDefault();
     const data = {
-      id: String(userData.data.length
-        ? Number(userData.data[userData.data.length - 1].id + 1)
+      id: String(userData?.data?.length
+        ? Number(userData?.data[userData?.data?.length - 1]?.id + 1)
         : "1"),
       name: e.target.user.value,
       lastName: "Vohidov",
       age: 20,
     };
-    console.log(userData.data.length);
-
+    console.log(userData?.data?.length);
+  
     console.log(data);
     addUser(data);
   }
