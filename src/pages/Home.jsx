@@ -25,6 +25,7 @@ function Home() {
     mutationFn: (data) => axios.patch(`http://localhost:3000/users/${data.id}`, {
       name: data.newValue
     }),
+    onSuccess:() => refetch()
   })
 
   function handleSubmit(e) {
